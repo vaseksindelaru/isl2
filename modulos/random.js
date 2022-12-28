@@ -1,5 +1,37 @@
 
 import { useState } from "react";
+
+
+
+function Wallet() {
+  // Creamos un estado para almacenar el saldo de la cartera
+  const [balance, setBalance] = useState(0);
+
+  // Creamos una función para añadir dinero a la cartera
+  const addFunds = (amount) => {
+    setBalance(balance + amount);
+  }
+
+  // Creamos una función para retirar dinero de la cartera
+  const withdrawFunds = (amount) => {
+    if (amount > balance) {
+      alert("No tienes suficiente saldo en tu cartera para realizar esta operación");
+    } else {
+      setBalance(balance - amount);
+    }
+  }
+
+  return (
+    <div>
+      <h1>Tu saldo actual es: {balance}</h1>
+      <button onClick={() => addFunds(10)}>Añadir 10</button>
+      <button onClick={() => withdrawFunds(10)}>Retirar 10</button>
+    </div>
+  );
+}
+
+export default Wallet;
+/*
 const randomList = [
     {id:1,
         name:'exp1',
@@ -121,12 +153,15 @@ return(
    <div>
     <button onClick={()=>{newState(randomList2)}}>boton</button>
     {state[aleatorio].name}
-    <p>llegando Random</p>
+    <p>ISL2</p>
     {state.map((dates)=>{
-        return <p key={dates.id}>{dates.name}{dates.description}</p>
+        return <li key={dates.id} >
+            <p>{dates.name}</p>
+            <p>{dates.description}</p>
+            </li>
     })}
    </div>)
 
 }
 
- //{date.map((alea)=><small key={alea}>{alea}</small>)}
+ //{date.map((alea)=><small key={alea}>{alea}</small>)}*/

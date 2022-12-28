@@ -75,9 +75,9 @@ export default function Home({game}) {
               </div>
               center Tailwind CSS is fying your CSS with a tool like cssnano,and compressing your CSS with Brotli.CSS with a tool like cssnano
 </div>
-<div className='bg-gray-700'>chat input</div>
+<div className='bg-blue-700'>chat input</div>
 </div>
-          <div className='bg-indigo-700 w-56 flex-none overflow-y-auto'>
+          <div className='bg-red-700 w-56 flex-none overflow-y-auto'>
             <div>
               right sidebar
             < RightSidebar />
